@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %} {% load static %} <link
+rel="stylesheet" href="{% static "css/index.css" %}">
+
+<h2 class="custom-margin-top mb-3">Check Out All Our Foods</h2>
+<div class="cardContainer">
+  {% for item in categories%}
+  <div class="cardList">
+    <img
+      class="img-fluid rounded mb-2"
+      src="{{item.strCategoryThumb}}"
+      alt=""
+    />
+    <h5>Product ID: {{item.idCategory}}</h5>
+    <h3>{{item.strCategory}}</h3>
+    <p>{{item.strCategoryDescription | truncatewords:10}}</p>
+    <button class="btn">Check Out</button>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

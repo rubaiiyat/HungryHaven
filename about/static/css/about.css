@@ -1,0 +1,29 @@
+.aboutContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.aboutContainer img {
+  width: 500px;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: transform 0.5s;
+}
+.aboutContainer img:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  border: 2px solid #dd3545;
+}
+.aboutDetails {
+  width: 600px;
+}
+.text-danger {
+  font-family: brush script mt, cursive;
+  font-weight: 900;
+}
+
+.CardContainer img {
+  border-radius: 50px;
+}

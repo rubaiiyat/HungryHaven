@@ -1,0 +1,27 @@
+a:hover {
+  color: #dd0805 !important;
+}
+
+.btn {
+  background-color: #f42f2c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #dd0805;
+  color: white;
+}
+
+.CardContainer {
+  cursor: pointer;
+}
+.CardContainer img {
+  filter: brightness(40%);
+  transition: filter 0.5s, width 0.5s;
+}
+.CardContainer img:hover {
+  filter: brightness(100%);
+}

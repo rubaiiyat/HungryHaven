@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %} {% load static %} <link
+rel="stylesheet" href="{% static "css/about.css" %}">
+<div class="aboutContainer">
+  <div class="aboutDetails">
+    <h1 class="text-danger font-Lavanderia">Hungry Haven</h1>
+    <h3>OUR STORY</h3>
+    <p>
+      Established in 2010, Hungry Haven began as a cozy family-owned eatery in
+      Bogura, founded by food enthusiasts Josef. Over the years, our commitment
+      to culinary excellence and warm hospitality has made us a beloved dining
+      destination. With a menu inspired by global flavors and crafted by skilled
+      chefs, we've earned a reputation for unforgettable dining experiences.
+      From humble beginnings to becoming a culinary landmark in Bogura, Hungry
+      Haven continues to delight diners with exceptional food and service. Join
+      us as we write the next chapter in our storied history of taste and
+      tradition.
+    </p>
+  </div>
+  <div>
+    <img class="img-fluid" src="{% static "images/img.jpg" %}" alt="images">
+  </div>
+</div>
+
+<h1 class="text-danger mt-5">Meet Our</h1>
+<h1>CHEF</h1>
+<div class="d-flex flex-wrap row row-cols-1 row-cols-md-3 g-4 mt-2">
+  {% for chef in chefs%}
+  <div class="CardContainer">
+    <img class="img-fluid w-50 rounded mb-2" src="{{chef.img}}" alt="" />
+    <h3>{{chef.name}}</h3>
+    <h6>{{chef.position}}</h6>
+    <p>{{chef.details}}</p>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

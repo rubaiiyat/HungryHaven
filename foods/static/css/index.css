@@ -1,0 +1,40 @@
+.cardContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.cardList {
+  width: 400px;
+  height: 450px;
+  cursor: pointer;
+  border: 1px solid rgb(247, 215, 215);
+  transition: transform 0.5s;
+  padding: 5px;
+}
+.cardList:hover {
+  color: #910808;
+}
+.cardList:hover {
+  transform: scale(1.07);
+}
+
+.cardList img {
+  width: 350px;
+}
+
+.btn {
+  background-color: #f42f2c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #dd0805;
+  color: white;
+}

@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %} {% load static %} <link
+rel="stylesheet" href=" {% static "css/home.css" %} ">
+
+<div
+  class="d-flex flex-wrap justify-content-around align-items-center row row-cols-1 row-cols-md-3 g-4 mx-3"
+>
+  <div>
+    <h1>Delicious Chocolate Cupcakes With Cream</h1>
+    <p>
+      Indulge in the ultimate treat with our decadent chocolate cupcakes,
+      featuring rich cocoa flavors and topped with a velvety cream frosting.
+      Each bite offers a perfect balance of sweetness and creaminess, making it
+      an irresistible delight for chocolate lovers. Treat yourself to pure bliss
+      with every bite!
+    </p>
+    <button class="btn">Check Out</button>
+  </div>
+  <div class="cupcakeImg">
+    <img class="img-fluid w-100 " src="{% static "images/img.png" %}"
+    alt="Image">
+  </div>
+</div>
+
+<h1>Our Top Rated Dishes</h1>
+<div class="d-flex flex-wrap row row-cols-1 row-cols-md-3 g-4 mt-2">
+  {% for item in topItems%}
+  <div class="CardContainer">
+    <img class="img-fluid w-75 rounded mb-2" src="{{item.img}}" alt="" />
+    <h3>{{item.name}}</h3>
+    <h3>${{item.price}}</h3>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
